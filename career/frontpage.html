@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(ok.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            width: 1200px;
+            height: 75px;
+            margin: auto;
+        }
+
+        .m {
+
+            color: #ff7200;
+        }
+
+        .icon {
+            width: 200px;
+            float: left;
+            height: 70px;
+        }
+
+        .logo {
+            color: #ff7200;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            float: left;
+            padding-top: 10px;
+            margin-top: 12px;
+        }
+
+        .menu {
+            width: 400px;
+            float: right;
+            height: 70px;
+            display: flex;
+            justify-content: flex-end;
+            /* Aligns menu items to the right */
+        }
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            /* Align list items to the right */
+            align-items: center;
+            padding-right: 50px;
+            /* Adds space from the right side */
+        }
+
+        ul li {
+            list-style: none;
+            margin-left: 40px;
+            /* Adjust spacing between menu items */
+            margin-top: 27px;
+            font-size: 14px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+        }
+
+        ul li a:hover {
+            color: #ff7200;
+
+        }
+
+        /*About*/
+        .about {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            transition: 0.3s;
+            box-shadow: 0px 0px 15px 5px #ff7200;
+        }
+
+        /* Steps Styling */
+        .steps {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .step {
+            flex: 1;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover {
+            transform: scale(1.05);
+        }
+
+        .step h3 {
+            font-size: 1.5em;
+            color: #ff7200;
+            margin-bottom: 10px;
+        }
+
+        /*contact*/
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .content {
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: #fff;
+            position: relative;
+        }
+
+        .content .par {
+            padding-left: 20px;
+            padding-bottom: 25px;
+            gap: 1px;
+            line-height: 28px;
+            text-align: justify;
+        }
+
+        .content h1 {
+            font-size: 50px;
+            padding-left: 20px;
+            margin-top: 9%;
+            gap: 1px;
+        }
+
+        .content .cn {
+            width: 160px;
+            height: 40px;
+            background: #ff7200;
+            border: none;
+            color: #f9f9f9;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .4s ease;
+        }
+
+        .content .cn a {
+            text-decoration: none;
+            color: #fff;
+            transition: .3s ease;
+        }
+
+        .cn:hover {
+            background-color: #ff7200;
+            color: white;
+            box-shadow: 0px 0px 15px 5px #ff7200;
+        }
+
+        .content span {
+            color: #ff7200;
+            font-size: 65px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .contact-page {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .contact-form-section,
+        .contact-info-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-form-section {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .contact-form-section h2 {
+            color: #ff7200;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name-fields {
+            display: flex;
+            gap: 20px;
+        }
+
+        .name-fields div {
+            flex: 1;
+        }
+
+        .contact-form label {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .contact-form button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #ff7200;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .contact-info-section {
+            background-color: #f2f5f7;
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-info-section h2 {
+            color: #ff7200;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-section p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .contact-info-section .social-icons {
+            margin: 15px 0;
+        }
+
+        .contact-info-section .social-icons a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .icon {
+            margin-left: 43%;
+            margin-top: 2%;
+        }
+
+        .icon i {
+            padding: 10px;
+            border: 3px solid #ff7200;
+            border-radius: 50%;
+            margin-left: 10px;
+            color: #ff7200;
+            transition: 0.3s;
+        }
+
+        i:hover {
+            background-color: transparent;
+            color: #ff7200(62, 183, 231);
+            box-shadow: 0px 0px 15px 5px #ff7200;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="m">
+
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <h2 style="color: #ff7200; margin-right: 77%; margin-top: 3%; font-size: 30px;">Serendipity</h2>
+                    <li><a href="./frontpage.html">HOME</a></li>
+                    <li><a href="#abo">ABOUT</a></li>
+                    <li><a href="./login.html">LOGIN</a></li>
+                    <li><a href="./register.html">REGISTER</a></li>
+                    <li><a href="#co">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Choose your <br><span>Career</span> With Us</h1>
+            <p class="par">Your career is more than just a job—it's a journey to discovering your true potential and
+                making a difference in the world. <br> Every step you take brings you closer to who you are meant to be.
+                Believe in yourself and the path you're creating, because success is built on courage, perseverance, and
+                a passion for growth.Don’t wait for opportunities to come knocking—create them. Dream big, take small
+                steps, and remember: each day is a chance to become a better version of yourself. Your future is in your
+                hands, and with determination and purpose, there’s no limit to what you can achieve."</p>
+
+            <button class="cn"><a href="./register.html">JOIN US</a></button> <!-- Updated link -->
+        </div>
+    </div>
+    <br><br><br><br>
+    <!--About-->
+    <div id="abo">
+        <section class="about">
+            <h2>About Career Path Finder</h2>
+            <p>At Career Path Finder, we believe that finding the right career is essential to leading a fulfilling
+                life. Our goal is to help you uncover the career paths that align with your passions, strengths, and
+                ambitions.</p>
+            <p>Whether you are just starting out or looking to switch careers, our platform provides personalized
+                recommendations based on your unique interests and skills, empowering you to make informed career
+                choices.</p>
+            <p>Ready to discover your ideal career path? Start your journey now!</p>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <p>Find your ideal career in three simple steps:</p>
+            <div class="steps">
+                <div class="step">
+                    <h3>Step 1</h3>
+                    <p>Complete the assessment by choosing your interests and skills.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 2</h3>
+                    <p>Receive personalized career recommendations based on your responses.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 3</h3>
+                    <p>Plan your future and take the first step toward your dream career!</p>
+                </div>
+
+            </div>
+
+        </section>
+        <center><a href="a.html" class="button">Start Career Assessment</a></center>
+
+        <br><br>
+    </div>
+
+
+
+    <!--Contact-->
+    <div id="co">
+        <main id="contact" class="contact-page">
+            <section class="contact-form-section">
+                <h2>Contact Us Here</h2>
+                <form action="#" class="contact-form">
+                    <div class="name-fields">
+                        <div>
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" required>
+                        </div>
+                        <div>
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" required>
+                        </div>
+                    </div>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" required>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5"></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <br>
+    <hr>
+    <footer>
+        <span class="icon">
+            <i class="fa-brands fa-linkedin"></i><i class="fa-solid fa-phone"></i><i
+                class="fa-brands fa-instagram"></i><i class="fa-regular fa-envelope"></i><br>
+        </span>
+
+
+
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>

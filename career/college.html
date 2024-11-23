@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./ok.jpg'); /* Add the URL of your background image here */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #fff; /* Set the title color to white for better readability on dark backgrounds */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Add shadow for text contrast */
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            min-width: 700px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background to improve readability */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        table th, table td {
+            padding: 15px; /* Increased padding for labels and cells */
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        table th {
+            background-color: rgba(242, 242, 242, 0.9);
+            color: #333;
+            font-weight: bold;
+            padding: 20px 15px; /* Extra padding specifically for header labels */
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: rgba(249, 249, 249, 0.9);
+        }
+
+        .success-message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #fff;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>College Information Table</h1>
+    
+    <table id="college-table">
+        <thead>
+            <tr>
+                <th>College ID</th>
+                <th>College Name</th>
+                <th>Combined Score</th>
+                <th>City</th>
+                <th>Rating</th>
+                <th>Average Fees</th>
+                <th>Faculty Student Ratio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>372</td>
+                <td>Sri Sai Ram Engineering College</td>
+                <td>67.3333</td>
+                <td>Chennai</td>
+                <td>3.37</td>
+                <td>147778</td>
+                <td>0.0860265</td>
+            </tr>
+            <tr>
+                <td>617</td>
+                <td>Karpagam College of Engineering</td>
+                <td>68.6667</td>
+                <td>Coimbatore</td>
+                <td>3.32</td>
+                <td>154727</td>
+                <td>0.0925007</td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>Thiagarajar College of Engineering</td>
+                <td>69.6667</td>
+                <td>Madurai</td>
+                <td>3.47</td>
+                <td>136525</td>
+                <td>0.0741701</td>
+            </tr>
+            <tr>
+                <td>759</td>
+                <td>Sri Sai Ram Institute of Technology</td>
+                <td>71.6667</td>
+                <td>Chennai</td>
+                <td>3.3</td>
+                <td>147143</td>
+                <td>0.0866637</td>
+            </tr>
+            <tr>
+                <td>825</td>
+                <td>SNS College of Technology</td>
+                <td>74</td>
+                <td>Kurumbapalayam</td>
+                <td>3.51</td>
+                <td>168542</td>
+                <td>0.0810211</td>
+            </tr>
+            <tr>
+                <td>859</td>
+                <td>Bharathidasan University</td>
+                <td>76.3333</td>
+                <td>Tiruchirappalli</td>
+                <td>3.32</td>
+                <td>68308.7</td>
+                <td>0.0686695</td>
+            </tr>
+            <tr>
+                <td>760</td>
+                <td>Sri Ramakrishna Institute of Technology</td>
+                <td>76.8333</td>
+                <td>Coimbatore</td>
+                <td>3.39</td>
+                <td>162857</td>
+                <td>0.0830973</td>
+            </tr>
+            <tr>
+                <td>496</td>
+                <td>Vel Tech Multi Tech Dr Rangarajan Dr Sakunthala Engineering College</td>
+                <td>78.5</td>
+                <td>Chennai</td>
+                <td>3.49</td>
+                <td>217143</td>
+                <td>0.0975035</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="success-message" id="successMessage">Wishing you success!</div>
+
+    <script src="college.js"></script>
+</body>
+</html>

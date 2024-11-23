@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('./ok.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border-radius: 10px;
+        }
+        .question {
+            display: none;
+            font-size: 18px;
+        }
+        .question.active {
+            display: block;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #previous {
+            background-color: #ffb6c1;
+        }
+        #next, #submit {
+            background-color: #add8e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+      <h1>Self <br> Assessment</h1>
+    </header>
+        <div id="questions-container"></div>
+        <div class="buttons">
+            <button id="previous" onclick="previousQuestion()">Previous</button>
+            <button id="next" onclick="nextQuestion()">Next</button>
+            <button id="submit" onclick="submitForm()" style="display: none;">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            "Drawing", "Dancing", "Singing", "Sports", "Video Game", "Acting", "Travelling",
+            "Gardening", "Animals", "Photography", "Teaching", "Exercise", "Coding",
+            "Electricity Components", "Mechanic Parts", "Computer Parts", "Business", "Listening Music"
+        ];
+
+        let currentQuestion = 0;
+
+        const questionsContainer = document.getElementById('questions-container');
+
+        // Initialize question elements
+        questions.forEach((question, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'question';
+            if (index === 0) questionDiv.classList.add('active');
+            questionDiv.innerHTML = `
+                <label for="q${index}">Enter value for ${question} (0 or 1):</label><br>
+                <input type="number" id="q${index}" name="${question}" min="0" max="1" required>
+            `;
+            questionsContainer.appendChild(questionDiv);
+        });
+
+        const questionElements = document.querySelectorAll('.question');
+        const nextButton = document.getElementById('next');
+        const submitButton = document.getElementById('submit');
+
+        function updateQuestionVisibility() {
+            questionElements.forEach((el, index) => {
+                el.classList.toggle('active', index === currentQuestion);
+            });
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                updateQuestionVisibility();
+
+                // Show the Submit button on the last question
+                if (currentQuestion === questions.length - 1) {
+                    nextButton.style.display = 'none';
+                    submitButton.style.display = 'inline-block';
+                }
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                updateQuestionVisibility();
+
+                // Hide the Submit button if we're not on the last question
+                if (currentQuestion < questions.length - 1) {
+                    nextButton.style.display = 'inline-block';
+                    submitButton.style.display = 'none';
+                }
+            }
+        }
+
+        function submitForm() {
+            // Redirect to thank you page
+            window.location.href = 'thankyou.html';
+        }
+    </script>
+</body>
+</html>
